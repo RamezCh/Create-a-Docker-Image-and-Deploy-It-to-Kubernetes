@@ -56,3 +56,4 @@ CMD["redis-server"]
 - docker tag myredisproject  ramezchreide/myredisproject
 - docker push ramezchreide/myredisproject
 
+Note: docker tag myredisproject <usernameDockerHub>/<projectName>
