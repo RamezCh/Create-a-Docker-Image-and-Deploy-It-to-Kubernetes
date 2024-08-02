@@ -80,6 +80,7 @@ Kubernetes (K8s) is an container orchestration tool. It manages containers and c
 - Kubernetes provides objects like secrets to store sensitive data and configmap to store configurations in Kubernetes cluster
 - Kubernetes will not create any images. Images are always created by container tool like docker that are pushed to DockerHub
 
+### How to Create a POD
 kubelet is an agent process of Kubernetes. It runs on worker nodes and is responsible for creating pods.
 
 Pods is the smallest object in kubernetes that you can create and manage they are like containers.
@@ -87,4 +88,10 @@ The main job of POD is to keep the container running and if it is in exited stat
 
 A POD can have 1 container or many containers depending on what we want but 1 POD 1 Container is most preferable.
 
-### How to Create a POD
+We can see the status of POD on Master VM. Kubernetes code is written in YAML and Master is only for giving instructions.
+
+We create a POD by:
+- Connect to Master Node
+- sudo su -
+- kubectl get nodes
+- Every command of kubernetes starts with kubectl (Kubernetes Command-line interface)
