@@ -66,7 +66,8 @@ Note: docker tag myredisproject <usernameDockerHub>/<imageName>
 - kubectl get pods
 
 other way:
-- 
+- vim project-deployment.yml
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -84,6 +85,11 @@ spec:
       containers:
         - name: c1
           image: ramezchreide/myredisproject
+          
+- wq!
+- kubectl create -f project-deployment.yml
+- kubectl get all
+
 
 --- END OF SOLUTION ---
 
