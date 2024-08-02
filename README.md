@@ -74,6 +74,8 @@ metadata:
 spec:
   replicas: 4
   selector:
+    matchLabels:
+      app: webserver
   template: # this pod template using which replicas will be created
     metadata:
       labels: # every replica/pod will have a unique name given by K8s
