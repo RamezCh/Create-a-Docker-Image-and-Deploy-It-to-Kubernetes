@@ -73,3 +73,6 @@ Kubernetes (K8s) is an container orchestration tool. It manages containers and c
 - Kuberenetes services are: EKS, AKS, GKE
 - We have many objects to control various workflows on Kubernetes, to create a replica > POD, scaleup > replicaSet, update image > Deployment, statefulset, service object, daemon sets
 - We can create jobs and cron jobs in kubernetes
+- It also supports various deployment strategies like: Rolling update, recreate, blue and green deployment, canary deployment
+- Kubernetes also have a GUI called as Kubernetes Dashboard
+- Kubernetes provides objects like secrets to store sensitive data and configmap to store configurations in Kubernetes cluster
