@@ -90,6 +90,9 @@ spec:
 - kubectl create -f project-deployment.yml
 - kubectl get all
 
+kubectl get pods -n kube-system
+
+This allows you to see if network available
 
 --- END OF SOLUTION ---
 
