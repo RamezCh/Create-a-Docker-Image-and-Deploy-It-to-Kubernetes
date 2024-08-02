@@ -66,3 +66,7 @@ Kubernetes (K8s) is an container orchestration tool. It manages containers and c
 - Kubernetes can also create containers of docker as well as other container looks like CRI-O, containerD, Rkt container..
 - Kubernetes should have a unique Container runtime interface(container tool)
 - There can only be 1 Container tool per Cluster
+- Once containers have been created, Kubernetes can auto scale the containers
+- Kubernetes allows us to store the data on Volumes storage outside the cluster -> Persistent Volume
+- Kubernetes supports ingress load balancers
+- Kubernetes is also available as a serivce on various Cloud Platforms
