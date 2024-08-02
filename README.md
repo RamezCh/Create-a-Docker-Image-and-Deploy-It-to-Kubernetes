@@ -59,6 +59,7 @@ CMD["redis-server"]
 Note: docker tag myredisproject <usernameDockerHub>/<projectName>
 
 ### Deployment using Kubernetes
+-
 
 ## Kubernetes
 Kubernetes (K8s) is an container orchestration tool. It manages containers and can scale up/down containers and ensure availablity.
@@ -90,8 +91,28 @@ A POD can have 1 container or many containers depending on what we want but 1 PO
 
 We can see the status of POD on Master VM. Kubernetes code is written in YAML and Master is only for giving instructions.
 
-We create a POD by:
+
 - Connect to Master Node
 - sudo su -
 - kubectl get nodes
 - Every command of kubernetes starts with kubectl (Kubernetes Command-line interface)
+- If you master or worker nodes are not ready. You will have to reset kubernetes on the lab
+- ON THE MASTER NODE: kubeadm reset --force
+- ON THE both the WORKER NODES: kubadm reset
+
+
+#### We create a POD by:
+- kubectl run pod1 --image sonal04/myredisproject
+- sonal04/myredisproject is image name
+- kubectl get pods
+
+### Deploy multiple pods of the image:
+- kubectl create deployment myproject --image sonal04/myredisproject --replicas 4
+- kubectl get pods
+
+### Delete a pod
+- kubectl delete pod <podname>
+- kubectl get pods
+
+### Delete all the pods for the deployment:
+- kubectl delete  deployment --all
