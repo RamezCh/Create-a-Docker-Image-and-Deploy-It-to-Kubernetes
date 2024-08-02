@@ -113,7 +113,7 @@ We can see the status of POD on Master VM. Kubernetes code is written in YAML an
 - kubectl get pods
 
 ### Deploy multiple pods of the image:
-- kubectl create deployment myproject --image sonal04/myredisproject --replicas 4
+- kubectl create deployment myproject --image ramezchreide/myredisproject --replicas 4
 - kubectl get pods
 
 ### Delete a pod
@@ -122,3 +122,36 @@ We can see the status of POD on Master VM. Kubernetes code is written in YAML an
 
 ### Delete all the pods for the deployment:
 - kubectl delete  deployment --all
+
+### POD Specification file:
+- vim pod1.yml
+
+apiVersion: v1 (this value is coming from kubernetes)
+
+kind: Pod (given by kubernetes)
+
+metadata:
+
+  name: mypod
+  
+  labels:
+  
+    app: webserver
+    
+    author: sonal
+    
+spec: # specify what you want on the POD - > 1 container or multiple?
+
+containers:
+
+    name: c1
+    
+    image: ramezchreide/myredisproject
+
+    name: c2
+
+    image: tomcat
+
+- wq!
+- kubectl create -f pod1.yml
+- kubectl get pods
