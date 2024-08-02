@@ -92,7 +92,7 @@ spec:
 
 kubectl get pods -n kube-system
 
-This allows you to see if network available
+This allows you to see if network availablekube
 
 --- END OF SOLUTION ---
 
