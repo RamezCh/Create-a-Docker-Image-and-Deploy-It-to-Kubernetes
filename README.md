@@ -59,6 +59,8 @@ CMD["redis-server"]
 Note: docker tag myredisproject <usernameDockerHub>/<projectName>
 
 ### Deployment using Kubernetes
+
+## Kubernetes
 Kubernetes (K8s) is an container orchestration tool. It manages containers and can scale up/down containers and ensure availablity.
 - Works in Cluster Mode where it is installed on one VM and it manages various worker nodes
 - main VM is called master in kubernetes unlike docker swarm (manager)
@@ -76,3 +78,8 @@ Kubernetes (K8s) is an container orchestration tool. It manages containers and c
 - It also supports various deployment strategies like: Rolling update, recreate, blue and green deployment, canary deployment
 - Kubernetes also have a GUI called as Kubernetes Dashboard
 - Kubernetes provides objects like secrets to store sensitive data and configmap to store configurations in Kubernetes cluster
+- Kubernetes will not create any images. Images are always created by container tool like docker that are pushed to DockerHub
+
+kubelet is an agent process of Kubernetes. It runs on worker nodes and is responsible for creating pods
+
+### How to Create a POD
