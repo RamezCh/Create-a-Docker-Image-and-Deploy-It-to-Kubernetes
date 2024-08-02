@@ -56,10 +56,11 @@ CMD["redis-server"]
 - docker tag myredisproject  ramezchreide/myredisproject
 - docker push ramezchreide/myredisproject
 
-Note: docker tag myredisproject <usernameDockerHub>/<projectName>
+Note: docker tag myredisproject <usernameDockerHub>/<imageName>
 
 ### Deployment using Kubernetes
 - kubectl run pod1 --image ramezchreide/myredisproject
+- kubectl run <podName> --image <usernameDockerHub>/<imageName>
 - kubectl get pods
 - kubectl create deployment myproject --image ramezchreide/myredisproject --replicas 4
 - kubectl get pods
