@@ -83,6 +83,8 @@ Kubernetes (K8s) is an container orchestration tool. It manages containers and c
 kubelet is an agent process of Kubernetes. It runs on worker nodes and is responsible for creating pods.
 
 Pods is the smallest object in kubernetes that you can create and manage they are like containers.
-The main job of POD is to keep the container running and if it is in exited state, POD will try to restart the container. In Kubernetes we always work with POD and not containers.
+The main job of POD is to keep the container running and if it is in exited state, POD will try to restart the container. In Kubernetes we always work with POD and not containers. POD is what is connected to containers, we don't connect to containers.
+
+A POD can have 1 container or many containers depending on what we want but 1 POD 1 Container is most preferable.
 
 ### How to Create a POD
