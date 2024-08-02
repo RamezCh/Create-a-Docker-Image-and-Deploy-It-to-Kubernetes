@@ -49,7 +49,7 @@ EXPOSE 6379
 CMD["redis-server"]
 
 - :wq!
-- docker build -t myredisproject:v1 .
+- docker build -t myredisproject .
 - docker images
 - docker login
 - Give User and Pass
