@@ -49,12 +49,17 @@ EXPOSE 6379
 CMD["redis-server"]
 
 - :wq!
+
+![Step 1:](Dockerfile.png)
+
 - docker build -t myredisproject .
 - docker images
 - docker login
 - Give User and Pass
 - docker tag myredisproject  ramezchreide/myredisproject
 - docker push ramezchreide/myredisproject
+
+![Step 2:](DockerHub.png)
 
 Note: docker tag myredisproject <usernameDockerHub>/<imageName>
 
@@ -64,6 +69,8 @@ Note: docker tag myredisproject <usernameDockerHub>/<imageName>
 - kubectl get pods
 - kubectl create deployment myproject --image ramezchreide/myredisproject --replicas 4
 - kubectl get pods
+  
+![Step 3:](pod1yml.png)
 
 other way:
 - vim project-deployment.yml
@@ -89,6 +96,9 @@ spec:
 - wq!
 - kubectl create -f project-deployment.yml
 - kubectl get all
+
+![Step 4:](project-deploymentYML.png)
+![Step 5:](kubectl get all.png)
 
 kubectl get pods -n kube-system
 
