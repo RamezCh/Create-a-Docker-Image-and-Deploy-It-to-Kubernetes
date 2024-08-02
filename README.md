@@ -70,3 +70,6 @@ Kubernetes (K8s) is an container orchestration tool. It manages containers and c
 - Kubernetes allows us to store the data on Volumes storage outside the cluster -> Persistent Volume
 - Kubernetes supports ingress load balancers
 - Kubernetes is also available as a serivce on various Cloud Platforms
+- Kuberenetes services are: EKS, AKS, GKE
+- We have many objects to control various workflows on Kubernetes, to create a replica > POD, scaleup > replicaSet, update image > Deployment, statefulset, service object, daemon sets
+- We can create jobs and cron jobs in kubernetes
