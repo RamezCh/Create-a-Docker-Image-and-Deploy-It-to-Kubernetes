@@ -62,4 +62,7 @@ Note: docker tag myredisproject <usernameDockerHub>/<projectName>
 Kubernetes (K8s) is an container orchestration tool. It manages containers and can scale up/down containers and ensure availablity.
 - Works in Cluster Mode where it is installed on one VM and it manages various worker nodes
 - main VM is called master in kubernetes unlike docker swarm (manager)
-- 
+- By default no containers will be scheduled on the Master node
+- Kubernetes can also create containers of docker as well as other container looks like CRI-O, containerD, Rkt container..
+- Kubernetes should have a unique Container runtime interface(container tool)
+- There can only be 1 Container tool per Cluster
