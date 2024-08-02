@@ -29,9 +29,9 @@ You have also been asked to publish this image on your organization's Docker Hub
 - sudo su -
 - kubeadm init --ignore-preflight-errors=all
 - mkdir -p $HOME/.kube
-- sudo cp -i /etc/kubernetes/admin.confg $HOME/.kube/config
+- sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 - sudo chown $(id -u):$(id -g) $HOME/.kube/config
-- kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yml
+- kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
 - kubectl get nodes
 - kubeadm token create --print-join-command
 - Copy join command and put it in worker nodes
