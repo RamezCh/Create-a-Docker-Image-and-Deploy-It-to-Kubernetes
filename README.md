@@ -98,7 +98,7 @@ spec:
 - kubectl get all
 
 ![Step 4:](project-deploymentYML.png)
-![Step 5:](kubectl get all.png)
+![Step 5:](kubectl-get-all.png)
 
 kubectl get pods -n kube-system
 
