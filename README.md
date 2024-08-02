@@ -57,3 +57,9 @@ CMD["redis-server"]
 - docker push ramezchreide/myredisproject
 
 Note: docker tag myredisproject <usernameDockerHub>/<projectName>
+
+### Deployment using Kubernetes
+Kubernetes (K8s) is an container orchestration tool. It manages containers and can scale up/down containers and ensure availablity.
+- Works in Cluster Mode where it is installed on one VM and it manages various worker nodes
+- main VM is called master in kubernetes unlike docker swarm (manager)
+- 
