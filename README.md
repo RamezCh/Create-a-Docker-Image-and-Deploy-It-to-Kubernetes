@@ -65,6 +65,24 @@ Note: docker tag myredisproject <usernameDockerHub>/<imageName>
 - kubectl create deployment myproject --image ramezchreide/myredisproject --replicas 4
 - kubectl get pods
 
+other way:
+- 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myproject-deploy
+spec:
+  replicas: 4
+  selector:
+  template: # this pod template using which replicas will be created
+    metadata:
+      labels: # every replica/pod will have a unique name given by K8s
+        app: webserver
+    spec:
+      containers:
+        - name: c1
+          image: ramezchreide/myredisproject
+
 --- END OF SOLUTION ---
 
 ## Kubernetes
